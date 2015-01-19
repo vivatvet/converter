@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="Tiitle2">bender the best</string>
+    <string name="First_text">Please select item</string>
 
     <string-array name="spinner">
         <item>Basic</item>

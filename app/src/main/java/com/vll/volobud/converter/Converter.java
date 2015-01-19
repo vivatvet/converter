@@ -2,6 +2,7 @@ package com.vll.volobud.converter;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,11 +27,13 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
+
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
         //finish
     }
 
+        //This for setOnItemSelectedListener
         public void onItemSelected(AdapterView<?> parent, View view,
         int pos, long id) {
             // An item was selected. You can retrieve the selected item using
