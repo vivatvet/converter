@@ -1,5 +1,8 @@
 package com.vll.volobud.converter;
 
+import android.app.Activity;
+import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,6 +15,9 @@ import android.widget.Toast;
 
 
 public class Converter extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
+
+    Fragment1 frag1;
+    FragmentTransaction fTrans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,8 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
 
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        frag1 = new Fragment1();
         //finish
     }
 
@@ -37,7 +45,16 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
         int pos, long id) {
             // An item was selected. You can retrieve the selected item using
             // parent.getItemAtPosition(pos)
+            fTrans = getFragmentManager().beginTransaction();
             Toast.makeText(getBaseContext(), "Position = " + pos, Toast.LENGTH_SHORT).show();
+            if (pos == 0) {
+                fTrans.replace(R.id.frgmCont, frag1);
+            }
+            if (pos == 1) {
+                fTrans.remove(frag1);
+            }
+            fTrans.commit();
+
         }
 
         public void onNothingSelected(AdapterView<?> parent) {

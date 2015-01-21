@@ -7,6 +7,8 @@
     <string name="Tiitle2">bender the best</string>
     <string name="First_text">Please select item</string>
 
+    <string name="frag1_text">Fragment 1</string>
+
     <string-array name="spinner">
         <item>Basic</item>
         <item>Extended</item>
