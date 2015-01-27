@@ -12,21 +12,21 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/Basic_button_weight"
             android:id="@+id/button"
             android:layout_column="0" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/Basic_button_length"
             android:id="@+id/button2"
             android:layout_column="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/Basic_button_volume"
             android:id="@+id/button3"
             android:layout_column="2" />
     </TableRow>
@@ -38,21 +38,21 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/Basic_button_square"
             android:id="@+id/button4"
             android:layout_column="0" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/Basic_button_temperature"
             android:id="@+id/button5"
             android:layout_column="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/Basic_button_speed"
             android:id="@+id/button6"
             android:layout_column="2" />
     </TableRow>

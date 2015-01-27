@@ -7,11 +7,19 @@
     <string name="Tiitle2">bender the best</string>
     <string name="First_text">Please select item</string>
 
+    <string name="Basic_button_weight">Weight</string>
+    <string name="Basic_button_length">Length and Dist.</string>
+    <!--<string name="Basic_button_Distance">Distance</string>-->
+    <string name="Basic_button_volume">Volume</string>
+    <string name="Basic_button_square">Square</string>
+    <string name="Basic_button_speed">Speed</string>
+    <string name="Basic_button_temperature">Temperature</string>
+
     <string name="frag1_text">Fragment 1</string>
 
     <string-array name="spinner">
         <item>Basic</item>
-        <item>Extended</item>
+        <item>Special</item>
     </string-array>
 
 </resources>
