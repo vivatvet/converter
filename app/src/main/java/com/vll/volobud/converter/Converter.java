@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class Converter extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 
     Fragment1 frag1;
+    SpecialFragment spfrag;
     FragmentTransaction fTrans;
 
     @Override
@@ -37,6 +38,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
         spinner.setOnItemSelectedListener(this);
 
         frag1 = new Fragment1();
+        spfrag = new SpecialFragment();
         //finish
     }
 
@@ -51,7 +53,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
                 fTrans.replace(R.id.frgmCont, frag1);
             }
             if (pos == 1) {
-                fTrans.remove(frag1);
+                fTrans.replace(R.id.frgmCont, spfrag);
             }
             fTrans.commit();
 
