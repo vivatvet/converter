@@ -1,8 +1,6 @@
 package com.vll.volobud.converter;
 
-import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,7 +14,7 @@ import android.widget.Toast;
 
 public class Converter extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 
-    Fragment1 frag1;
+    BasicFragment bsfrag;
     SpecialFragment spfrag;
     FragmentTransaction fTrans;
 
@@ -37,7 +35,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        frag1 = new Fragment1();
+        bsfrag = new BasicFragment();
         spfrag = new SpecialFragment();
         //finish
     }
@@ -50,7 +48,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
             fTrans = getFragmentManager().beginTransaction();
             Toast.makeText(getBaseContext(), "Position = " + pos, Toast.LENGTH_SHORT).show();
             if (pos == 0) {
-                fTrans.replace(R.id.frgmCont, frag1);
+                fTrans.replace(R.id.frgmCont, bsfrag);
             }
             if (pos == 1) {
                 fTrans.replace(R.id.frgmCont, spfrag);
