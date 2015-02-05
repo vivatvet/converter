@@ -1,8 +1,6 @@
 package com.vll.volobud.converter;
 
-import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,10 +12,12 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+
 public class Converter extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 
     Fragment1 frag1;
     SpecialFragment spfrag;
+    Engineering engifrag;
     FragmentTransaction fTrans;
 
     @Override
@@ -25,7 +25,6 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_converter);
         //start
-
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -39,6 +38,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
 
         frag1 = new Fragment1();
         spfrag = new SpecialFragment();
+        engifrag = new Engineering();
         //finish
     }
 
@@ -55,15 +55,15 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
             if (pos == 1) {
                 fTrans.replace(R.id.frgmCont, spfrag);
             }
+            if (pos == 2){
+                fTrans.replace(R.id.frgmCont, engifrag);
+            }
             fTrans.commit();
-
         }
 
         public void onNothingSelected(AdapterView<?> parent) {
             // Another interface callback
         }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

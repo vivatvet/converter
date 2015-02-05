@@ -20,6 +20,21 @@
     <string-array name="spinner">
         <item>Basic</item>
         <item>Special</item>
+        <item>Engineering</item>
     </string-array>
+
+    <!--Button name for special item-->
+    <string name="buttonfuel">Fuel consumption</string>
+    <string name="buttoncookery">Cookery</string>
+    <string name="buttonpricesforproducts">Prices for products</string>
+    <string name="buttonWeightvolume">Weight / volume</string>
+    <string name="buttonfractionsandpercentages">Fractions and percentages</string>
+    <string name="buttonrateofexchange">Rate of exchange</string>
+
+    <!--Button name for engineering item-->
+    <string name="button_time">Time</string>
+    <string name="button_acceleration">Acceleration</string>
+    <string name="button_density">Density</string>
+    <string name="abc">Text button on click</string>
 
 </resources>
