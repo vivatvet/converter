@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class Converter extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 
-    Fragment1 frag1;
+    BasicFragment bsfrag;
     SpecialFragment spfrag;
     Engineering engifrag;
     FragmentTransaction fTrans;
@@ -36,7 +36,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        frag1 = new Fragment1();
+        bsfrag = new BasicFragment();
         spfrag = new SpecialFragment();
         engifrag = new Engineering();
         //finish
@@ -50,7 +50,7 @@ public class Converter extends ActionBarActivity implements AdapterView.OnItemSe
             fTrans = getFragmentManager().beginTransaction();
             Toast.makeText(getBaseContext(), "Position = " + pos, Toast.LENGTH_SHORT).show();
             if (pos == 0) {
-                fTrans.replace(R.id.frgmCont, frag1);
+                fTrans.replace(R.id.frgmCont, bsfrag);
             }
             if (pos == 1) {
                 fTrans.replace(R.id.frgmCont, spfrag);
