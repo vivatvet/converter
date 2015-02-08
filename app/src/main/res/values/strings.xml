@@ -24,17 +24,32 @@
     </string-array>
 
     <!--Button name for special item-->
-    <string name="buttonfuel">Fuel consumption</string>
-    <string name="buttoncookery">Cookery</string>
-    <string name="buttonpricesforproducts">Prices for products</string>
-    <string name="buttonWeightvolume">Weight / volume</string>
-    <string name="buttonfractionsandpercentages">Fractions and percentages</string>
-    <string name="buttonrateofexchange">Rate of exchange</string>
+    <string name="button_fuel">Fuel consumption</string>
+    <string name="button_cookery">Cookery</string>
+    <string name="button_prices_for_products">Prices for products</string>
+    <string name="button_Weight_volume">Weight / volume</string>
+    <string name="button_fractions_and_percentages">Fractions and percentages</string>
+    <string name="button_rate_of_exchange">Rate of exchange</string>
 
     <!--Button name for engineering item-->
     <string name="button_time">Time</string>
     <string name="button_acceleration">Acceleration</string>
     <string name="button_density">Density</string>
     <string name="abc">Text button on click</string>
+
+    <!--Button name for Time_calculation item-->
+    <string name="button_nanosecond">Nanosecond</string>
+    <string name="button_microsecond">Microsecond</string>
+    <string name="button_millisecond">Millisecond</string>
+    <string name="button_second">Second</string>
+    <string name="button_minute">Minute</string>
+    <string name="button_hour">Hour</string>
+    <string name="button_day">Day</string>
+    <string name="button_week">Week</string>
+    <string name="button_year">Year</string>
+    <string name="button_century">Century</string>
+    <string name="button_millennium">Millennium</string>
+    <string name="button_clean">Clean</string>
+    <string name="text_time">Enter the number</string>
 
 </resources>
