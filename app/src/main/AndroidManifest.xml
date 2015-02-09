@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Time_calculation"
-            />
+        <activity android:name=".Time_calculation"/>
+        <activity android:name=".Weight_calculation"/>
     </application>
 
 </manifest>

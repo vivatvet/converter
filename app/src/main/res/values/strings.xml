@@ -52,4 +52,9 @@
     <string name="button_clean">Clean</string>
     <string name="text_time">Enter the number</string>
 
+    <!--Strings for weight_calculation-->
+    <string name="button_gram">Gram</string>
+    <string name="button_kilogram">Kilogram</string>
+    <string name="button_miligram">Milligram</string>
+
 </resources>
