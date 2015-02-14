@@ -13,12 +13,26 @@
             android:layout_width="142dp"
             android:layout_height="wrap_content"
             android:textSize="25sp" />
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/button_clean"
-            android:id="@+id/buttonClean_weight"
-            android:enabled="false"/>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/button_clean"
+                android:id="@+id/buttonClean_weight"
+                android:enabled="false"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_weight"
+                android:layout_weight="1" />
+        </TableRow>
 
 
         <TableRow
@@ -32,13 +46,14 @@
                 android:id="@+id/buttonGram"
                 android:enabled="false"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/editTextGram"
+                android:text=""
+                android:id="@+id/gram"
+                android:layout_column="1"
                 android:layout_weight="1"/>
+
         </TableRow>
 
         <TableRow
