@@ -1,6 +1,7 @@
 package com.vll.volobud.converter;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,26 +15,25 @@ import android.widget.TextView;
  */
 public class Weight_calculation extends Activity {
 
-    Button b_gram;
-    EditText enter_text;
-    TextView gram;
+    Button buttonClean;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weight_calculation);
 
-        gram = (TextView)findViewById(R.id.gram);
-        b_gram = (Button)findViewById(R.id.buttonGram);
-        enter_text = (EditText)findViewById(R.id.editText_weight);
+        buttonClean = (Button)findViewById(R.id.buttonClean_weight);
 
-        b_gram.setOnClickListener(new View.OnClickListener() {
+        buttonClean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gram();
+                Fragment frag1 = getFragmentManager().findFragmentById(R.id.w_fragment);
+                ((TextView) frag1.getView().findViewById(R.id.editTextWeight)).setText(null);
+                ((TextView) frag1.getView().findViewById(R.id.editTextWeightKilogram)).setText(null);
+                ((TextView) frag1.getView().findViewById(R.id.editTextWeightMiligram)).setText(null);
             }
         });
 
-        enter_text.addTextChangedListener(new TextWatcher() {
+    /*    enter_text.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -46,11 +46,11 @@ public class Weight_calculation extends Activity {
             public void afterTextChanged(Editable s) {
                 enableSubmitIfReady();
             }
-        });
+        });*/
 
     }
 
-    private void enableSubmitIfReady() {
+    /*private void enableSubmitIfReady() {
         boolean isReadyText = enter_text.getText().toString().length() >= 1;
         if (isReadyText) {
             b_gram.setEnabled(true);
@@ -63,5 +63,7 @@ public class Weight_calculation extends Activity {
         String text;
         text = enter_text.getText().toString();
         gram.setText(text);
-    }
+    }*/
+
+
 }
