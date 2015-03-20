@@ -9,11 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by vladimir on 27.02.15
  */
-public class WeightFragment extends Fragment implements TextWatcher {
+public class WeightFragment extends Fragment implements TextWatcher, View.OnClickListener {
 
     EditText Enter_Weight;
     EditText Enter_Weight_Kilogram;
@@ -41,6 +42,10 @@ public class WeightFragment extends Fragment implements TextWatcher {
         Enter_Weight.addTextChangedListener(this);
         Enter_Weight_Kilogram.addTextChangedListener(this);
         Enter_Weight_Miligram.addTextChangedListener(this);
+
+        Button_Gram.setOnClickListener(this);
+        Button_Kilogram.setOnClickListener(this);
+        Button_Miligram.setOnClickListener(this);
 
 
         return v;
@@ -76,16 +81,34 @@ public class WeightFragment extends Fragment implements TextWatcher {
         //}
     }
 
+    // Implemented methods
+    //===================================================================================
+    // Listeners for text fields
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
     }
-
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
     }
-
     @Override
     public void afterTextChanged(Editable s) {
         enableSubmitIfReady();
     }
+
+    // Listeners for Buttons
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.buttonGram:
+                Toast.makeText(getActivity(),"Button GRAM",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.buttonKiloGram:
+                Toast.makeText(getActivity(),"Button KILOGRAM",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.buttonMiligram:
+                Toast.makeText(getActivity(),"Button KILOGRAM",Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+    //=====================================================================================
 }
